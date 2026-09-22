@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GK Lawn Care | Precision Care. Beautiful Results.</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: {
+                            DEFAULT: '#1E4D2B',
+                            dark: '#14351D',
+                            light: '#2E7D32',
+                            soft: '#EBF3ED',
+                        },
+                        earth: {
+                            DEFAULT: '#8D6E63',
+                            light: '#F5F7F4',
+                            dark: '#5D4037',
+                        },
+                        accent: {
+                            yellow: '#EAB308',
+                            gold: '#D97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F5F7F4;
+        }
+        /* Custom image comparison slider styles */
+        .before-after-container {
+            position: relative;
+            overflow: hidden;
+            user-select: none;
+        }
+        .img-after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 50%;
+            overflow: hidden;
+        }
+        .slider-divider {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background-color: white;
+            cursor: ew-resize;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-earth-light text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <!-- Top Contact Bar -->
+    <div class="bg-forest-dark text-slate-200 text-xs sm:text-sm py-2 px-4 border-b border-forest">
+        <div class="max-w-7xl mx-auto flex justify-between items-center flex-wrap gap-2">
+            <div class="flex items-center gap-4 text-xs sm:text-sm">
+                <span class="flex items-center gap-1.5">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-accent-yellow"></i>
+                    London, ON & Surrounding Areas
+                </span>
+                <span class="hidden md:flex items-center gap-1.5">
+                    <i data-lucide="clock" class="w-4 h-4 text-accent-yellow"></i>
+                    Mon - Sat: 7:00 AM - 7:00 PM
+                </span>
+            </div>
+            <div class="flex items-center gap-4 text-xs sm:text-sm font-semibold">
+                <a href="tel:2497331323" class="hover:text-accent-yellow transition flex items-center gap-1.5">
+                    <i data-lucide="phone" class="w-4 h-4 text-accent-yellow"></i>
+                    249-733-1323
+                </a>
+                <a href="https://wa.me/12397331323?text=Hi%20GK%20Lawn%20Care,%20I'd%20like%20to%20get%20a%20free%20quote!" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-500 text-white px-2.5 py-1 rounded-full text-xs flex items-center gap-1 transition">
+                    <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header / Navigation -->
+    <header class="sticky top-0 bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="bg-forest text-white p-2.5 rounded-xl shadow-md group-hover:bg-forest-light transition">
+                        <i data-lucide="sprout" class="w-7 h-7"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-black text-2xl tracking-tight text-slate-900 leading-none">
+                            GK <span class="text-forest">LAWN CARE</span>
+                        </span>
+                        <span class="text-[11px] font-semibold text-earth-dark tracking-wide mt-1">Precision Care. Beautiful Results.</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-700">
+                    <a href="#home" class="hover:text-forest transition">Home</a>
+                    <a href="#estimator" class="hover:text-forest transition">Price Estimator</a>
+                    <a href="#services" class="hover:text-forest transition">Services</a>
+                    <a href="#about" class="hover:text-forest transition">About Us</a>
+                    <a href="#gallery" class="hover:text-forest transition">Gallery</a>
+                    <a href="#pricing" class="hover:text-forest transition">Pricing</a>
+                    <a href="#testimonials" class="hover:text-forest transition">Reviews</a>
+                    <a href="#faq" class="hover:text-forest transition">FAQ</a>
+                    <a href="#contact" class="hover:text-forest transition">Contact</a>
+                </nav>
+
+                <!-- CTA Buttons -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="#quote" class="bg-forest hover:bg-forest-dark text-white px-5 py-2.5 rounded-xl font-semibold shadow-md transition flex items-center gap-2 text-sm">
+                        <i data-lucide="calculator" class="w-4 h-4 text-accent-yellow"></i>
+                        Get Free Quote
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="lg:hidden p-2 text-slate-700 hover:text-forest focus:outline-none" aria-label="Toggle Navigation">
+                    <i data-lucide="menu" id="menu-icon" class="w-7 h-7"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-100 bg-white px-4 pt-3 pb-6 space-y-3 shadow-xl">
+            <a href="#home" class="mobile-link block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-forest-soft hover:text-forest">Home</a>
+            <a href="#estimator" class="mobile-link block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-forest-soft hover:text-forest">Price Estimator</a>
+            <a href="#services" class="mobile-link block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-forest-soft hover:text-forest">Services</a>
+            <a href="#about" class="mobile-link block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-forest-soft hover:text-forest">About Us</a>
+            <a href="#gallery" class="mobile-link block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-forest-soft hover:text-forest">Gallery</a>
+            <a href="#pricing" class="mobile-link block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-forest-soft hover:text-forest">Pricing</a>
+            <a href="#testimonials" class="mobile-link block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-forest-soft hover:text-forest">Reviews</a>
+            <a href="#faq" class="mobile-link block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-forest-soft hover:text-forest">FAQ</a>
+            <a href="#contact" class="mobile-link block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-forest-soft hover:text-forest">Contact</a>
+            <div class="pt-2 flex flex-col gap-2">
+                <a href="#quote" class="mobile-link w-full bg-forest text-white py-3 rounded-xl font-semibold text-center block shadow-md">Get Free Quote</a>
+                <a href="https://wa.me/12397331323?text=Hi%20GK%20Lawn%20Care,%20I'd%20like%20to%20get%20a%20free%20quote!" target="_blank" rel="noopener noreferrer" class="w-full bg-emerald-600 text-white py-2.5 rounded-xl font-semibold text-center flex items-center justify-center gap-2 text-sm">
+                    <i data-lucide="message-square" class="w-4 h-4"></i> WhatsApp Chat
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section id="home" class="relative bg-forest-dark text-white overflow-hidden py-20 lg:py-32">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb23659?auto=format&fit=crop&w=1920&q=80" alt="Beautifully manicured green lawn" class="w-full h-full object-cover object-center opacity-30">
+                <div class="absolute inset-0 bg-gradient-to-r from-forest-dark via-forest-dark/85 to-transparent"></div>
+            </div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-2xl">
+                    <div class="inline-flex items-center gap-2 bg-forest/80 text-accent-yellow px-4 py-2 rounded-full text-xs sm:text-sm font-bold tracking-wide uppercase border border-forest-light/50 mb-6 shadow-md">
+                        <i data-lucide="check-circle-2" class="w-4 h-4 text-accent-yellow"></i>
+                        Lawn Mowing Starting at Only $50!
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
+                        A Beautiful Lawn Starts Here!
+                    </h1>
+                    <p class="text-lg sm:text-xl text-slate-200 mb-8 leading-relaxed font-light">
+                        Reliable, Affordable & Professional Lawn Care & Maintenance Serving London, Ontario & Surrounding Areas.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#quote" class="bg-accent-yellow hover:bg-accent-gold text-slate-950 font-bold px-8 py-4 rounded-xl shadow-lg transition text-center flex items-center justify-center gap-2 text-base">
+                            <i data-lucide="calculator" class="w-5 h-5"></i>
+                            Request a Free Quote
+                        </a>
+                        <a href="tel:2497331323" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl border border-white/20 backdrop-blur-sm transition text-center flex items-center justify-center gap-2 text-base">
+                            <i data-lucide="phone-call" class="w-5 h-5 text-accent-yellow"></i>
+                            Call 249-733-1323
+                        </a>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="mt-12 pt-8 border-t border-white/15 grid grid-cols-3 gap-4 text-center sm:text-left">
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-accent-yellow">100%</p>
+                            <p class="text-xs sm:text-sm text-slate-300">Satisfaction Guaranteed</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-accent-yellow">Friendly</p>
+                            <p class="text-xs sm:text-sm text-slate-300">& Reliable Crew</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-accent-yellow">Flat Rates</p>
+                            <p class="text-xs sm:text-sm text-slate-300">Transparent Pricing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Instant Price Estimator Widget -->
+        <section id="estimator" class="py-16 bg-white border-b border-slate-200">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="text-xs font-bold text-forest tracking-wider uppercase mb-2 block">Interactive Calculator</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Instant Lawn Care Price Estimator</h2>
+                    <p class="mt-2 text-slate-600 text-sm">Select your property size and frequency to generate a quick cost estimate.</p>
+                </div>
+
+                <div class="bg-earth-light p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-7 space-y-6">
+                        <!-- Size Slider -->
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="text-xs font-bold uppercase text-slate-700">Property Lawn Size</label>
+                                <span id="yard-size-val" class="font-bold text-forest text-sm">Small Yard (~2,500 sq ft)</span>
+                            </div>
+                            <input type="range" id="yard-slider" min="1" max="4" step="1" value="1" oninput="calculateEstimate()" class="w-full accent-forest cursor-pointer">
+                            <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+                                <span>Small (&lt;3k sq ft)</span>
+                                <span>Medium (3-6k)</span>
+                                <span>Large (6-10k)</span>
+                                <span>XL Estate</span>
+                            </div>
+                        </div>
+
+                        <!-- Frequency Options -->
+                        <div>
+                            <label class="text-xs font-bold uppercase text-slate-700 mb-2 block">Service Frequency</label>
+                            <div class="grid grid-cols-3 gap-3">
+                                <button type="button" onclick="setFrequency(1, this)" class="freq-btn bg-forest text-white py-2.5 px-3 rounded-xl text-xs font-bold border border-forest transition">Weekly</button>
+                                <button type="button" onclick="setFrequency(1.15, this)" class="freq-btn bg-white text-slate-700 py-2.5 px-3 rounded-xl text-xs font-bold border border-slate-300 hover:border-forest transition">Bi-Weekly</button>
+                                <button type="button" onclick="setFrequency(1.3, this)" class="freq-btn bg-white text-slate-700 py-2.5 px-3 rounded-xl text-xs font-bold border border-slate-300 hover:border-forest transition">One-Time</button>
+                            </div>
+                        </div>
+
+                        <!-- Add-ons Checkboxes -->
+                        <div>
+                            <label class="text-xs font-bold uppercase text-slate-700 mb-2 block">Optional Add-ons</label>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <label class="flex items-center gap-2 bg-white p-2.5 rounded-xl border border-slate-200 cursor-pointer text-xs font-medium text-slate-700">
+                                    <input type="checkbox" id="addon-edging" onchange="calculateEstimate()" class="accent-forest"> Sidewalk Edging (+$10)
+                                </label>
+                                <label class="flex items-center gap-2 bg-white p-2.5 rounded-xl border border-slate-200 cursor-pointer text-xs font-medium text-slate-700">
+                                    <input type="checkbox" id="addon-weeding" onchange="calculateEstimate()" class="accent-forest"> Garden Weeding (+$20)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Calculated Result -->
+                    <div class="md:col-span-5 bg-forest-dark text-white p-6 rounded-xl text-center flex flex-col justify-between h-full border border-forest">
+                        <div>
+                            <span class="text-xs uppercase font-semibold text-accent-yellow">Estimated Cost Per Visit</span>
+                            <div class="text-5xl font-black text-white my-3">$<span id="estimated-price">50</span></div>
+                            <p class="text-xs text-slate-300">Final price verified upon on-site assessment.</p>
+                        </div>
+                        <button onclick="applyEstimateToQuote()" class="mt-6 w-full bg-accent-yellow hover:bg-accent-gold text-slate-950 font-bold py-3 rounded-xl text-xs uppercase tracking-wider transition shadow">
+                            Lock In This Estimate
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-earth-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-xs sm:text-sm font-bold text-forest tracking-wider uppercase mb-2">Our Capabilities</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Professional Services & Pricing</p>
+                    <p class="mt-4 text-slate-600">Precision property care tailored for your outdoor space in London and surrounding regions.</p>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="flex justify-center flex-wrap gap-2 mb-12">
+                    <button onclick="filterServices('all', this)" class="service-tab bg-forest text-white px-4 py-2 rounded-full text-xs font-bold transition">All Services</button>
+                    <button onclick="filterServices('lawn', this)" class="service-tab bg-white text-slate-700 px-4 py-2 rounded-full text-xs font-bold border border-slate-300 hover:border-forest transition">Lawn & Edging</button>
+                    <button onclick="filterServices('garden', this)" class="service-tab bg-white text-slate-700 px-4 py-2 rounded-full text-xs font-bold border border-slate-300 hover:border-forest transition">Garden & Mulch</button>
+                    <button onclick="filterServices('seasonal', this)" class="service-tab bg-white text-slate-700 px-4 py-2 rounded-full text-xs font-bold border border-slate-300 hover:border-forest transition">Seasonal & Hauling</button>
+                </div>
+
+                <!-- Services Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- 1. Lawn Mowing -->
+                    <div class="service-card lawn bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 bg-forest-soft text-forest rounded-xl flex items-center justify-center mb-5">
+                                <i data-lucide="scissors" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Lawn Mowing</h3>
+                            <p class="text-slate-600 text-sm mb-4">Precision grass cutting, neat perimeter trimming, and complete debris blow-off for a clean aesthetic.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs uppercase font-semibold text-slate-400">Starting at</span>
+                            <span class="text-2xl font-black text-forest">$50</span>
+                        </div>
+                    </div>
+
+                    <!-- 2. Weed Trimming & Edging -->
+                    <div class="service-card lawn bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 bg-forest-soft text-forest rounded-xl flex items-center justify-center mb-5">
+                                <i data-lucide="sparkles" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Weed Trimming & Edging</h3>
+                            <p class="text-slate-600 text-sm mb-4">Crisp vertical edges along sidewalks, driveways, and garden beds for top-tier curb appeal.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs uppercase font-semibold text-slate-400">Starting at</span>
+                            <span class="text-2xl font-black text-forest">$50</span>
+                        </div>
+                    </div>
+
+                    <!-- 3. Leaf Removal -->
+                    <div class="service-card seasonal bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center mb-5">
+                                <i data-lucide="wind" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Leaf Removal</h3>
+                            <p class="text-slate-600 text-sm mb-4">Seasonal leaf raking, power blowing, and bagging from lawns, flower beds, and walkways.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs uppercase font-semibold text-slate-400">Starting at</span>
+                            <span class="text-2xl font-black text-forest">$50</span>
+                        </div>
+                    </div>
+
+                    <!-- 4. Yard Clean-Up -->
+                    <div class="service-card seasonal bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 bg-forest-soft text-forest rounded-xl flex items-center justify-center mb-5">
+                                <i data-lucide="trash-2" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Yard Clean-Up</h3>
+                            <p class="text-slate-600 text-sm mb-4">Full yard refresh including twig pickup, fallen branch removal, and overgrown cutbacks.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs uppercase font-semibold text-slate-400">Starting at</span>
+                            <span class="text-2xl font-black text-forest">$60</span>
+                        </div>
+                    </div>
+
+                    <!-- 5. Garden Maintenance -->
+                    <div class="service-card garden bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 bg-forest-soft text-forest rounded-xl flex items-center justify-center mb-5">
+                                <i data-lucide="flower-2" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Garden Maintenance</h3>
+                            <p class="text-slate-600 text-sm mb-4">Detailed hand weeding, soil turning, plant pruning, and keeping beds tidy all season long.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs uppercase font-semibold text-slate-400">Starting at</span>
+                            <span class="text-2xl font-black text-forest">$60</span>
+                        </div>
+                    </div>
+
+                    <!-- 6. Planting Flowers & Shrubs -->
+                    <div class="service-card garden bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 bg-forest-soft text-forest rounded-xl flex items-center justify-center mb-5">
+                                <i data-lucide="tree-pine" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Planting Flowers & Shrubs</h3>
+                            <p class="text-slate-600 text-sm mb-4">Expert planting of annuals, perennials, shrubs, and bushes to enhance your outdoor environment.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs uppercase font-semibold text-slate-400">Starting at</span>
+                            <span class="text-2xl font-black text-forest">$60</span>
+                        </div>
+                    </div>
+
+                    <!-- 7. Mulching -->
+                    <div class="service-card garden bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 bg-forest-soft text-forest rounded-xl flex items-center justify-center mb-5">
+                                <i data-lucide="layers" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Mulching</h3>
+                            <p class="text-slate-600 text-sm mb-4">Fresh mulch spreading to preserve soil moisture, suppress weeds, and give gardens a clean layout.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs uppercase font-semibold text-slate-400">Starting at</span>
+                            <span class="text-2xl font-black text-forest">$60</span>
+                        </div>
+                    </div>
+
+                    <!-- 8. Junk Removal & Small Moves -->
+                    <div class="service-card seasonal bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center mb-5">
+                                <i data-lucide="truck" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Junk Removal & Small Moves</h3>
+                            <p class="text-slate-600 text-sm mb-4">Efficient hauling of patio furniture, yard waste, scrap items, plus light local item transport.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs uppercase font-semibold text-slate-400">Starting at</span>
+                            <span class="text-2xl font-black text-forest">$80</span>
+                        </div>
+                    </div>
+
+                    <!-- 9. Plant Watering & Garden Care -->
+                    <div class="service-card garden bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 bg-blue-100 text-blue-700 rounded-xl flex items-center justify-center mb-5">
+                                <i data-lucide="droplets" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Plant Watering & Garden Care</h3>
+                            <p class="text-slate-600 text-sm mb-4">Routine scheduled watering and care for your garden plants and potted flowers while you work or travel.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs uppercase font-semibold text-slate-400">Starting at</span>
+                            <span class="text-2xl font-black text-forest">$40</span>
+                        </div>
+                    </div>
+
+                    <!-- 10. Winter Snow Removal -->
+                    <div class="service-card seasonal bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition flex flex-col justify-between md:col-span-2 lg:col-span-1">
+                        <div>
+                            <div class="w-12 h-12 bg-cyan-100 text-cyan-700 rounded-xl flex items-center justify-center mb-5">
+                                <i data-lucide="snowflake" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Winter Snow Removal</h3>
+                            <p class="text-slate-600 text-sm mb-4">Prompt driveway clearing, walkway shoveling, and ice management during winter snowstorms.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs uppercase font-semibold text-slate-400">Seasonal</span>
+                            <span class="text-lg font-bold text-forest">Custom Quote</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-white border-y border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="text-xs sm:text-sm font-bold text-forest tracking-wider uppercase mb-2 block">Our Story</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-6">Dedicated Local Experts Serving London, Ontario</h2>
+                        <p class="text-slate-600 leading-relaxed mb-4">
+                            At <strong>GK Lawn Care</strong>, we take immense pride in delivering top-tier yard maintenance and landscaping services across London, ON and neighboring communities. Our company was founded on simple values: quality, reliability, and local pride.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed mb-8">
+                            We treat every home and business property like our own—focusing on sharp vertical edges, healthy lawns, punctuality, and friendly communication.
+                        </p>
+
+                        <!-- Highlight Pillars -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="bg-earth-light p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
+                                <div class="p-2 bg-forest-soft text-forest rounded-lg">
+                                    <i data-lucide="shield-check" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">Reliable & Trustworthy</h4>
+                                    <p class="text-xs text-slate-500 mt-0.5">Always on schedule and dependable</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-earth-light p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
+                                <div class="p-2 bg-forest-soft text-forest rounded-lg">
+                                    <i data-lucide="dollar-sign" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">Competitive Pricing</h4>
+                                    <p class="text-xs text-slate-500 mt-0.5">Clear, flat rates with zero hidden fees</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-earth-light p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
+                                <div class="p-2 bg-forest-soft text-forest rounded-lg">
+                                    <i data-lucide="smile" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">Friendly Service</h4>
+                                    <p class="text-xs text-slate-500 mt-0.5">Easy communication and support</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-earth-light p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
+                                <div class="p-2 bg-forest-soft text-forest rounded-lg">
+                                    <i data-lucide="check-square" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">Attention to Detail</h4>
+                                    <p class="text-xs text-slate-500 mt-0.5">Crisp borders and pristine cleanups</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visual Side Banner -->
+                    <div class="relative">
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb23659?auto=format&fit=crop&w=800&q=80" alt="GK Lawn Care In Action" class="w-full h-[450px] object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-forest-dark/90 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
+                                <p class="text-2xl font-bold mb-2">"Precision Care. Beautiful Results."</p>
+                                <p class="text-accent-yellow text-sm font-semibold">— The GK Lawn Care Promise</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-20 bg-slate-900 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs sm:text-sm font-bold text-accent-yellow tracking-wider uppercase mb-2">Visual Showcase</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Before & After Transformations</p>
+                    <p class="mt-4 text-slate-400">Drag the slider left and right to see how we revitalize yards across London, ON.</p>
+                </div>
+
+                <!-- Interactive Before / After Slider -->
+                <div class="max-w-4xl mx-auto bg-slate-800 rounded-2xl overflow-hidden shadow-2xl border border-slate-700 mb-12">
+                    <div class="before-after-container relative h-[350px] sm:h-[480px] w-full" id="slider-container">
+                        <!-- Before Image -->
+                        <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1200&q=80" alt="Unkempt Yard Before Care" class="absolute inset-0 w-full h-full object-cover">
+                        <span class="absolute bottom-4 left-4 bg-black/75 text-white px-3 py-1 rounded text-xs font-bold uppercase tracking-wider z-10">Before</span>
+
+                        <!-- After Image Container -->
+                        <div class="img-after" id="after-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb23659?auto=format&fit=crop&w=1200&q=80" alt="Manicured Lawn After GK Lawn Care" class="absolute top-0 left-0 w-full h-full object-cover max-w-none" id="after-img">
+                            <span class="absolute bottom-4 right-4 bg-forest text-white px-3 py-1 rounded text-xs font-bold uppercase tracking-wider z-10">After GK Lawn Care</span>
+                        </div>
+
+                        <!-- Divider line -->
+                        <div class="slider-divider" id="slider-divider">
+                            <div class="w-8 h-8 bg-white text-slate-800 rounded-full flex items-center justify-center shadow-lg -ml-3.5 absolute top-1/2 -translate-y-1/2 text-xs">
+                                &#10094;&#10095;
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Showcase Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="group relative rounded-xl overflow-hidden aspect-square bg-slate-800">
+                        <img src="https://images.unsplash.com/photo-1584467541268-b040f83be3fd?auto=format&fit=crop&w=600&q=80" alt="Precision Lawn Edging" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                            <p class="text-xs font-semibold text-white">Precision Edging</p>
+                        </div>
+                    </div>
+                    <div class="group relative rounded-xl overflow-hidden aspect-square bg-slate-800">
+                        <img src="https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=600&q=80" alt="Mulch Installation" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                            <p class="text-xs font-semibold text-white">Fresh Garden Mulch</p>
+                        </div>
+                    </div>
+                    <div class="group relative rounded-xl overflow-hidden aspect-square bg-slate-800">
+                        <img src="https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=600&q=80" alt="Seasonal Yard Cleanup" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                            <p class="text-xs font-semibold text-white">Leaf Cleanup</p>
+                        </div>
+                    </div>
+                    <div class="group relative rounded-xl overflow-hidden aspect-square bg-slate-800">
+                        <img src="https://images.unsplash.com/photo-1516253593875-bd7ba052fbc5?auto=format&fit=crop&w=600&q=80" alt="Winter Snow Clearing" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                            <p class="text-xs font-semibold text-white">Winter Snow Clearing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing / Packages Section -->
+        <section id="pricing" class="py-20 bg-earth-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs sm:text-sm font-bold text-forest tracking-wider uppercase mb-2">Transparent Plans</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Maintenance Packages</p>
+                    <p class="mt-4 text-slate-600">Select an option that perfectly matches your yard size and upkeep needs.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Basic Care -->
+                    <div class="bg-white rounded-2xl p-8 border border-slate-200 hover:shadow-lg transition flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Basic Care</h3>
+                            <p class="text-slate-500 text-sm mb-6">Designed for townhomes and smaller residential yards.</p>
+                            <div class="mb-6">
+                                <span class="text-4xl font-extrabold text-slate-900">$50</span>
+                                <span class="text-slate-500 text-sm"> / visit</span>
+                            </div>
+                            <ul class="space-y-3.5 text-sm text-slate-600 mb-8">
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-forest"></i>
+                                    Full Lawn Mowing
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-forest"></i>
+                                    String Trimming Edges
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-forest"></i>
+                                    Blow Off Hard Surfaces
+                                </li>
+                                <li class="flex items-center gap-3 text-slate-400 line-through">
+                                    Sidewalk Vertical Edging
+                                </li>
+                                <li class="flex items-center gap-3 text-slate-400 line-through">
+                                    Garden Bed Maintenance
+                                </li>
+                            </ul>
+                        </div>
+                        <button onclick="selectPackage('Basic Care ($50/visit)')" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-semibold py-3.5 rounded-xl transition shadow">
+                            Select Basic Plan
+                        </button>
+                    </div>
+
+                    <!-- Standard Care (Featured) -->
+                    <div class="bg-forest-dark text-white rounded-2xl p-8 shadow-xl relative flex flex-col justify-between border-2 border-accent-yellow">
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent-yellow text-slate-950 px-4 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider shadow-md">
+                            Most Popular Choice
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Standard Care</h3>
+                            <p class="text-slate-300 text-sm mb-6">Ideal for standard single-family suburban lawns.</p>
+                            <div class="mb-6">
+                                <span class="text-4xl font-extrabold text-white">$65</span>
+                                <span class="text-slate-300 text-sm"> / visit</span>
+                            </div>
+                            <ul class="space-y-3.5 text-sm text-slate-200 mb-8">
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-accent-yellow"></i>
+                                    Full Lawn Mowing
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-accent-yellow"></i>
+                                    Perimeter String Trimming
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-accent-yellow"></i>
+                                    Crisp Sidewalk & Driveway Edging
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-accent-yellow"></i>
+                                    Debris Blow-Off
+                                </li>
+                                <li class="flex items-center gap-3 text-slate-400/80 line-through">
+                                    Garden Bed Maintenance
+                                </li>
+                            </ul>
+                        </div>
+                        <button onclick="selectPackage('Standard Care ($65/visit)')" class="w-full bg-accent-yellow hover:bg-accent-gold text-slate-950 font-bold py-3.5 rounded-xl transition shadow-lg">
+                            Select Standard Plan
+                        </button>
+                    </div>
+
+                    <!-- Premium Complete Care -->
+                    <div class="bg-white rounded-2xl p-8 border border-slate-200 hover:shadow-lg transition flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Premium Complete Care</h3>
+                            <p class="text-slate-500 text-sm mb-6">All-inclusive maintenance for pristine year-round properties.</p>
+                            <div class="mb-6">
+                                <span class="text-4xl font-extrabold text-slate-900">$95+</span>
+                                <span class="text-slate-500 text-sm"> / visit</span>
+                            </div>
+                            <ul class="space-y-3.5 text-sm text-slate-600 mb-8">
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-forest"></i>
+                                    Mowing, Trimming & Edging
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-forest"></i>
+                                    Garden Bed Weeding & Care
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-forest"></i>
+                                    Small Shrub & Hedge Trimming
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-forest"></i>
+                                    Debris & Leaf Cleanup
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-forest"></i>
+                                    Priority Schedule Slot
+                                </li>
+                            </ul>
+                        </div>
+                        <button onclick="selectPackage('Premium Complete Care ($95+/visit)')" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-semibold py-3.5 rounded-xl transition shadow">
+                            Select Premium Plan
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Custom Quote Banner -->
+                <div class="mt-8 bg-white p-6 rounded-2xl border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+                    <div class="flex items-center gap-3">
+                        <div class="p-3 bg-forest-soft text-forest rounded-xl">
+                            <i data-lucide="sliders" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-base">Need a Custom Quote or One-Time Service?</h4>
+                            <p class="text-xs text-slate-500">We offer tailored pricing for commercial properties, large estates, and multi-service bundles.</p>
+                        </div>
+                    </div>
+                    <a href="#quote" class="bg-forest hover:bg-forest-dark text-white px-6 py-2.5 rounded-xl text-sm font-semibold transition whitespace-nowrap">
+                        Request Custom Estimate
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 bg-white border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs sm:text-sm font-bold text-forest tracking-wider uppercase mb-2">Client Reviews</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">What Our Clients Say</p>
+                    <p class="mt-4 text-slate-600">Read experiences from satisfied homeowners across London, Ontario.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Review 1 -->
+                    <div class="bg-earth-light p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex text-amber-400 mb-4">
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            </div>
+                            <p class="text-slate-700 italic text-sm mb-6">"GK Lawn Care handled our lawn mowing and edging all summer. They are always on time, polite, and leave the property looking immaculate every single visit!"</p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
+                            <div class="w-10 h-10 bg-forest text-white font-bold rounded-full flex items-center justify-center text-sm">
+                                MD
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Mark D.</h4>
+                                <p class="text-xs text-slate-500">North London, ON</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-earth-light p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex text-amber-400 mb-4">
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            </div>
+                            <p class="text-slate-700 italic text-sm mb-6">"Hired GK Lawn Care for fall leaf cleanup and garden mulching. Their attention to detail is fantastic and their pricing is extremely fair."</p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
+                            <div class="w-10 h-10 bg-forest text-white font-bold rounded-full flex items-center justify-center text-sm">
+                                SR
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Sarah R.</h4>
+                                <p class="text-xs text-slate-500">South London, ON</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="bg-earth-light p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex text-amber-400 mb-4">
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            </div>
+                            <p class="text-slate-700 italic text-sm mb-6">"Fast response time when I needed old yard furniture and debris hauled away. Very professional team. Highly recommend GK Lawn Care!"</p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
+                            <div class="w-10 h-10 bg-forest text-white font-bold rounded-full flex items-center justify-center text-sm">
+                                TC
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Tyler C.</h4>
+                                <p class="text-xs text-slate-500">Westmount, London</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive FAQ Accordion Section -->
+        <section id="faq" class="py-20 bg-earth-light border-b border-slate-200">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-xs font-bold text-forest tracking-wider uppercase mb-2 block">Helpful Information</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Frequently Asked Questions</h2>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
+                            Do I need to be home when you service my property?
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-forest transition-transform"></i>
+                        </button>
+                        <div class="faq-ans hidden px-5 pb-5 text-slate-600 text-sm border-t border-slate-100 pt-3">
+                            No, as long as we have gate access to your front and back yard and pets are indoors, our crew can complete the service and notify you upon completion.
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
+                            How do payments work?
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-forest transition-transform"></i>
+                        </button>
+                        <div class="faq-ans hidden px-5 pb-5 text-slate-600 text-sm border-t border-slate-100 pt-3">
+                            We accept Interac E-Transfers, cash, and online credit payments. Invoices are sent out upon job completion.
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
+                            What happens if it rains on my scheduled service day?
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-forest transition-transform"></i>
+                        </button>
+                        <div class="faq-ans hidden px-5 pb-5 text-slate-600 text-sm border-t border-slate-100 pt-3">
+                            If weather prevents mowing, we automatically reschedule your service for the next clear weather window within 24 to 48 hours.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Free Quote & Contact Section with Web3Forms Integration -->
+        <section id="quote" class="py-20 bg-earth-light">
+            <div id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    
+                    <!-- Form Container with Web3Forms Integration -->
+                    <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-2xl shadow-md border border-slate-200">
+                        <div class="mb-8">
+                            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-2">Request Your Free Quote</h2>
+                            <p class="text-slate-600 text-sm">Fill out the form below and we'll reply promptly with an accurate estimate.</p>
+                        </div>
+
+                        <!-- Web3Forms Form Submissions Endpoint -->
+                        <form id="quote-form" action="https://api.web3forms.com/submit" method="POST" onsubmit="handleQuoteSubmit(event)" class="space-y-5">
+                            
+                            <!-- Web3Forms Access Key Input -->
+                            <input type="hidden" name="access_key" value="3824b36d-801d-4b4d-ba6d-6af8cc33bede">
+                            <input type="hidden" name="subject" value="New Quote Request - GK Lawn Care Website">
+                            <input type="hidden" name="from_name" value="GK Lawn Care Website">
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Full Name *</label>
+                                    <input type="text" name="name" id="form-name" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-forest transition text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Phone Number *</label>
+                                    <input type="tel" name="phone" id="form-phone" required placeholder="249-733-1323" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-forest transition text-sm">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Email Address *</label>
+                                    <input type="email" name="email" id="form-email" required placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-forest transition text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Property Address / City *</label>
+                                    <input type="text" name="address" id="form-address" required placeholder="London, ON" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-forest transition text-sm">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Selected Service *</label>
+                                    <select name="service" id="form-service" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-forest transition text-sm bg-white">
+                                        <option value="">-- Select Service --</option>
+                                        <option value="Lawn Mowing ($50)">Lawn Mowing (From $50)</option>
+                                        <option value="Weed Trimming & Edging ($50)">Weed Trimming & Edging (From $50)</option>
+                                        <option value="Leaf Removal ($50)">Leaf Removal (From $50)</option>
+                                        <option value="Yard Clean-Up ($60)">Yard Clean-Up (From $60)</option>
+                                        <option value="Garden Maintenance ($60)">Garden Maintenance (From $60)</option>
+                                        <option value="Planting Flowers & Shrubs ($60)">Planting Flowers & Shrubs (From $60)</option>
+                                        <option value="Mulching ($60)">Mulching (From $60)</option>
+                                        <option value="Junk Removal & Small Moves ($80)">Junk Removal & Small Moves (From $80)</option>
+                                        <option value="Plant Watering & Care ($40)">Plant Watering & Care (From $40)</option>
+                                        <option value="Winter Snow Removal">Winter Snow Removal</option>
+                                        <option value="Basic Care Package ($50/visit)">Basic Care Package ($50/visit)</option>
+                                        <option value="Standard Care Package ($65/visit)">Standard Care Package ($65/visit)</option>
+                                        <option value="Premium Complete Care Package ($95+/visit)">Premium Complete Care ($95+/visit)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Preferred Contact Method *</label>
+                                    <select name="contact_method" id="form-contact-method" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-forest transition text-sm bg-white">
+                                        <option value="Phone Call">Phone Call</option>
+                                        <option value="Text Message">Text Message</option>                                         <option value="WhatsApp">WhatsApp</option>
+                                        <option value="Email">Email</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Estimated Cost Note (Optional)</label>
+                                <input type="text" name="calculator_estimate" id="form-calculator-estimate" readonly placeholder="No estimate generated yet" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-500 text-xs">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Message / Yard Notes *</label>
+                                <textarea name="message" id="form-notes" rows="3" required placeholder="Tell us about lawn size, gates, pet notes, or preferred schedule..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-forest transition text-sm"></textarea>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="w-full bg-forest hover:bg-forest-dark text-white font-bold py-4 rounded-xl shadow-md transition flex items-center justify-center gap-2 text-base">
+                                <i data-lucide="send" class="w-5 h-5 text-accent-yellow"></i>
+                                <span id="btn-text">Submit Quote Request</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Direct Info Column -->
+                    <div class="lg:col-span-5 flex flex-col justify-between space-y-8">
+                        <div>
+                            <span class="text-xs font-bold text-forest tracking-wider uppercase mb-2 block">Direct Contact</span>
+                            <h2 class="text-3xl font-extrabold text-slate-900 mb-6">Get In Touch</h2>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-8">
+                                Need quick answers? Give us a call, text, or message us directly on WhatsApp.
+                            </p>
+
+                            <div class="space-y-4">
+                                <!-- Phone -->
+                                <a href="tel:2497331323" class="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-forest transition group">
+                                    <div class="p-3 bg-forest-soft text-forest rounded-xl group-hover:bg-forest group-hover:text-white transition">
+                                        <i data-lucide="phone-call" class="w-6 h-6"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-bold text-slate-400 uppercase">Phone & Text</p>
+                                        <p class="text-lg font-extrabold text-slate-900 group-hover:text-forest transition">249-733-1323</p>
+                                    </div>
+                                </a>
+
+                                <!-- WhatsApp Chat -->
+                                <a href="https://wa.me/12397331323?text=Hi%20GK%20Lawn%20Care,%20I'd%20like%20to%20get%20a%20free%20quote!" target="_blank" rel="noopener noreferrer" class="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-emerald-600 transition group">
+                                    <div class="p-3 bg-emerald-100 text-emerald-700 rounded-xl group-hover:bg-emerald-600 group-hover:text-white transition">
+                                        <i data-lucide="message-square" class="w-6 h-6"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-bold text-slate-400 uppercase">Quick Chat</p>
+                                        <p class="text-lg font-extrabold text-slate-900 group-hover:text-emerald-600 transition">WhatsApp Direct Link</p>
+                                    </div>
+                                </a>
+
+                                <!-- Hours -->
+                                <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
+                                    <div class="p-3 bg-forest-soft text-forest rounded-xl">
+                                        <i data-lucide="clock" class="w-6 h-6"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-bold text-slate-400 uppercase">Working Hours</p>
+                                        <p class="text-sm font-bold text-slate-900 mt-1">Mon - Sat: 7:00 AM - 7:00 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Map Embed Area -->
+                        <div class="bg-slate-200 rounded-2xl h-48 relative overflow-hidden flex items-center justify-center border border-slate-300">
+                            <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80" alt="London Ontario Map area" class="w-full h-full object-cover opacity-60">
+                            <div class="absolute bg-white/90 backdrop-blur-sm px-4 py-2 rounded-xl shadow-md text-xs font-bold text-slate-900 flex items-center gap-2">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-forest"></i>
+                                London, ON & Surrounding Region
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-forest-dark text-slate-300 py-16 border-t border-forest">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <!-- Col 1: Brand -->
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="bg-forest text-white p-2 rounded-lg">
+                            <i data-lucide="sprout" class="w-6 h-6"></i>
+                        </div>
+                        <span class="font-black text-xl text-white tracking-tight">GK LAWN CARE</span>
+                    </div>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-6">
+                        Precision Care. Beautiful Results. Dependable, high-quality lawn care and landscaping services in London, Ontario.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-forest hover:bg-forest-light text-white rounded-lg flex items-center justify-center transition" aria-label="Facebook Page">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-forest hover:bg-forest-light text-white rounded-lg flex items-center justify-center transition" aria-label="Instagram">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h3 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Quick Links</h3>
+                    <ul class="space-y-2.5 text-xs text-slate-400">
+                        <li><a href="#home" class="hover:text-accent-yellow transition">Home</a></li>
+                        <li><a href="#estimator" class="hover:text-accent-yellow transition">Price Estimator</a></li>
+                        <li><a href="#services" class="hover:text-accent-yellow transition">Services & Rates</a></li>
+                        <li><a href="#about" class="hover:text-accent-yellow transition">About Us</a></li>
+                        <li><a href="#gallery" class="hover:text-accent-yellow transition">Before & After</a></li>
+                        <li><a href="#pricing" class="hover:text-accent-yellow transition">Packages</a></li>
+                        <li><a href="#quote" class="hover:text-accent-yellow transition">Get Free Quote</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Service Areas List -->
+                <div>
+                    <h3 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Service Areas</h3>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-accent-yellow"></i> London, ON</li>
+                        <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-accent-yellow"></i> St. Thomas</li>
+                        <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-accent-yellow"></i> Komoka</li>
+                        <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-accent-yellow"></i> Strathroy</li>
+                        <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-accent-yellow"></i> Thorndale</li>
+                        <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-accent-yellow"></i> Dorchester</li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact Summary -->
+                <div>
+                    <h3 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Contact Info</h3>
+                    <div class="space-y-3 text-xs text-slate-400">
+                        <p class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-accent-yellow"></i>
+                            <a href="tel:2497331323" class="hover:text-white transition font-bold text-sm text-slate-200">249-733-1323</a>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i data-lucide="instagram" class="w-4 h-4 text-accent-yellow"></i>
+                            <span>@gk.lawncare</span>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i data-lucide="clock" class="w-4 h-4 text-accent-yellow"></i>
+                            <span>Mon - Sat: 7:00 AM - 7:00 PM</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-forest text-center text-xs text-slate-400 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p>&copy; <span id="year"></span> GK Lawn Care. All rights reserved.</p>
+                <p>Serving London, ON and Surrounding Areas</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Confirmation Modal -->
+    <div id="modal-backdrop" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl p-6 sm:p-8 max-w-md w-full shadow-2xl border border-slate-200">
+            <div class="w-12 h-12 bg-forest-soft text-forest rounded-full flex items-center justify-center mb-4 mx-auto">
+                <i data-lucide="check-circle" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-2xl font-extrabold text-slate-900 text-center mb-2">Quote Request Sent!</h3>
+            <p class="text-slate-600 text-sm text-center mb-6">Thank you, <span id="modal-user-name" class="font-bold text-slate-900"></span>! We have received your request for <span id="modal-service-name" class="font-bold text-forest"></span>.</p>
+            
+            <div class="bg-earth-light p-4 rounded-xl text-xs space-y-2 mb-6 border border-slate-200">
+                <p><strong>Phone:</strong> <span id="modal-phone"></span></p>
+                <p><strong>Contact Method:</strong> <span id="modal-method"></span></p>
+                <p class="text-slate-500">We will reach out shortly at <strong>249-733-1323</strong> to confirm pricing and schedule details.</p>
+            </div>
+
+            <button onclick="closeModal()" class="w-full bg-forest hover:bg-forest-dark text-white font-bold py-3 rounded-xl transition">
+                Close Window
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Functions -->
+    <script>
+        let selectedFreqMultiplier = 1;
+
+        window.onload = function() {
+            lucide.createIcons();
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            initBeforeAfterSlider();
+            calculateEstimate();
+        };
+
+        function setFrequency(multiplier, btn) {
+            selectedFreqMultiplier = multiplier;
+            document.querySelectorAll('.freq-btn').forEach(b => {
+                b.className = "freq-btn bg-white text-slate-700 py-2.5 px-3 rounded-xl text-xs font-bold border border-slate-300 hover:border-forest transition";
+            });
+            btn.className = "freq-btn bg-forest text-white py-2.5 px-3 rounded-xl text-xs font-bold border border-forest transition";
+            calculateEstimate();
+        }
+
+        function calculateEstimate() {
+            const sliderVal = parseInt(document.getElementById('yard-slider').value);
+            const sizeLabel = document.getElementById('yard-size-val');
+            let basePrice = 50;
+
+            if (sliderVal === 1) {
+                basePrice = 50;
+                sizeLabel.textContent = "Small Yard (~2,500 sq ft)";
+            } else if (sliderVal === 2) {
+                basePrice = 65;
+                sizeLabel.textContent = "Medium Yard (3,000 - 6,000 sq ft)";
+            } else if (sliderVal === 3) {
+                basePrice = 85;
+                sizeLabel.textContent = "Large Yard (6,000 - 10,000 sq ft)";
+            } else if (sliderVal === 4) {
+                basePrice = 115;
+                sizeLabel.textContent = "XL Corner/Estate Property (10,000+ sq ft)";
+            }
+
+            let price = basePrice * selectedFreqMultiplier;
+            if (document.getElementById('addon-edging').checked) price += 10;
+            if (document.getElementById('addon-weeding').checked) price += 20;
+
+            const finalPrice = Math.round(price);
+            document.getElementById('estimated-price').textContent = finalPrice;
+        }
+
+        function applyEstimateToQuote() {
+            const estPrice = document.getElementById('estimated-price').textContent;
+            const sizeText = document.getElementById('yard-size-val').textContent;
+            
+            document.getElementById('form-service').value = "Lawn Mowing ($50)";
+            document.getElementById('form-calculator-estimate').value = `Estimated Rate: $${estPrice} / visit (${sizeText})`;
+            document.getElementById('quote').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function selectPackage(packageName) {
+            const serviceSelect = document.getElementById('form-service');
+            serviceSelect.value = packageName;
+            document.getElementById('quote').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function filterServices(category, btn) {
+            document.querySelectorAll('.service-tab').forEach(b => {
+                b.className = "service-tab bg-white text-slate-700 px-4 py-2 rounded-full text-xs font-bold border border-slate-300 hover:border-forest transition";
+            });
+            btn.className = "service-tab bg-forest text-white px-4 py-2 rounded-full text-xs font-bold transition";
+
+            const cards = document.querySelectorAll('.service-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+
+        function toggleFaq(btn) {
+            const ans = btn.nextElementSibling;
+            const icon = btn.querySelector('i');
+            if (ans.classList.contains('hidden')) {
+                ans.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                ans.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        function initBeforeAfterSlider() {
+            const container = document.getElementById('slider-container');
+            const afterWrap = document.getElementById('after-img-wrap');
+            const divider = document.getElementById('slider-divider');
+            const afterImg = document.getElementById('after-img');
+
+            if (!container) return;
+
+            let isDragging = false;
+
+            function updateSliderWidth(x) {
+                const rect = container.getBoundingClientRect();
+                let position = x - rect.left;
+                if (position < 0) position = 0;
+                if (position > rect.width) position = rect.width;
+
+                const percentage = (position / rect.width) * 100;
+                afterWrap.style.width = percentage + '%';
+                divider.style.left = percentage + '%';
+                afterImg.style.width = rect.width + 'px';
+            }
+
+            window.addEventListener('resize', () => {
+                const rect = container.getBoundingClientRect();
+                afterImg.style.width = rect.width + 'px';
+            });
+            afterImg.style.width = container.getBoundingClientRect().width + 'px';
+
+            divider.addEventListener('mousedown', () => isDragging = true);
+            window.addEventListener('mouseup', () => isDragging = false);
+            container.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                updateSliderWidth(e.clientX);
+            });
+
+            divider.addEventListener('touchstart', () => isDragging = true);
+            window.addEventListener('touchend', () => isDragging = false);
+            container.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                updateSliderWidth(e.touches[0].clientX);
+            });
+        }
+
+        function handleQuoteSubmit(e) {
+            e.preventDefault();
+
+            const form = document.getElementById('quote-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const btnText = document.getElementById('btn-text');
+
+            submitBtn.disabled = true;
+            btnText.textContent = "Sending Request...";
+
+            const formData = new FormData(form);
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(async (response) => {
+                if (response.status === 200) {
+                    const name = document.getElementById('form-name').value;
+                    const phone = document.getElementById('form-phone').value;
+                    const service = document.getElementById('form-service').value;
+                    const method = document.getElementById('form-contact-method').value;
+
+                    document.getElementById('modal-user-name').textContent = name;
+                    document.getElementById('modal-service-name').textContent = service;
+                    document.getElementById('modal-phone').textContent = phone;
+                    document.getElementById('modal-method').textContent = method;
+
+                    const backdrop = document.getElementById('modal-backdrop');
+                    backdrop.classList.remove('hidden');
+                    backdrop.classList.add('flex');
+                    form.reset();
+                } else {
+                    alert("Something went wrong with form submission. Please call us directly at 249-733-1323.");
+                }
+            })
+            .catch(error => {
+                alert("Submission failed. Please check your internet connection or call 249-733-1323.");
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                btnText.textContent = "Submit Quote Request";
+            });
+        }
+
+        function closeModal() {
+            const backdrop = document.getElementById('modal-backdrop');
+            backdrop.classList.add('hidden');
+            backdrop.classList.remove('flex');
+        }
+    </script>
+</body>
+</html>
